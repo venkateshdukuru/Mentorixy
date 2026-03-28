@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/auth.js",      "use": "@vercel/node" },
+    { "src": "api/chat.js",      "use": "@vercel/node" },
+    { "src": "api/experts.js",   "use": "@vercel/node" },
+    { "src": "api/questions.js", "use": "@vercel/node" },
+    { "src": "api/sessions.js",  "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/auth(.*)",      "dest": "/api/auth.js" },
+    { "src": "/api/chat(.*)",      "dest": "/api/chat.js" },
+    { "src": "/api/experts(.*)",   "dest": "/api/experts.js" },
+    { "src": "/api/questions(.*)", "dest": "/api/questions.js" },
+    { "src": "/api/sessions(.*)",  "dest": "/api/sessions.js" }
+  ],
+  "env": {
+    "MONGODB_URI":    "@mongodb_uri",
+    "JWT_SECRET":     "@jwt_secret",
+    "GEMINI_API_KEY": "@gemini_api_key",
+    "FRONTEND_URL":   "@frontend_url"
+  }
+}
