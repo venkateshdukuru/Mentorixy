@@ -53,7 +53,7 @@ export default function HomePage() {
 
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
             gap: '24px',
           }}>
             {features.map((f, i) => (
@@ -130,7 +130,7 @@ export default function HomePage() {
 
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
             gap: '24px'
           }}>
             {MOCK_EXPERTS.slice(0, 3).map(expert => (
@@ -148,7 +148,7 @@ export default function HomePage() {
           background: 'linear-gradient(135deg, rgba(124,58,237,0.2) 0%, rgba(6,182,212,0.1) 100%)',
           border: '1px solid rgba(124,58,237,0.2)',
           borderRadius: '28px',
-          padding: '64px 48px',
+          padding: 'clamp(40px, 8vw, 64px) clamp(20px, 5vw, 48px)',
           textAlign: 'center',
           position: 'relative',
           overflow: 'hidden',
