@@ -82,9 +82,10 @@ export default function HeroSection() {
 
       {/* Stats */}
       <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        gap: '32px',
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        gap: 'clamp(16px, 4vw, 32px)',
         maxWidth: '600px',
         width: '100%',
       }}>
@@ -96,7 +97,7 @@ export default function HeroSection() {
           <div key={i} style={{ textAlign: 'center' }}>
             <div style={{
               fontFamily: 'Outfit, sans-serif',
-              fontSize: '36px',
+              fontSize: 'clamp(28px, 6vw, 36px)',
               fontWeight: 800,
               background: 'linear-gradient(135deg, #a78bfa, #06b6d4)',
               WebkitBackgroundClip: 'text',
