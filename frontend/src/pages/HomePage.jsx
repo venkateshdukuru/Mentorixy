@@ -202,7 +202,11 @@ export default function HomePage() {
           WebkitTextFillColor: 'transparent',
           marginBottom: '12px',
         }}>Mentorixy</div>
-        <p>© 2025 Mentorixy. AI + Human Mentorship Platform.</p>
+        <p>
+          © 2026 Mentorixy. AI + Human Mentorship Platform.
+          <br />
+          Made with ❤️ by Dukuru Venkatesh
+        </p>
       </footer>
     </div>
   );
